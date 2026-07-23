@@ -1,100 +1,55 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>سامانه اطلاع رسانی مواکب پیاده روی جاماندگان اربعین ۱۴۰۵</title>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<div class="hero">
-
+<section class="hero">
 <div class="overlay">
-
-<h1>
-
-سامانه اطلاع رسانی مواکب پیاده روی جاماندگان اربعین ۱۴۰۵
-
-</h1>
-
-<h2>
-
- مسجد جامع قرچک تا حرم حضرت شاه عبدالعظیم حسنی (ع)
-
-</h2>
-
-<p>
-
-کمیته اطلاع رسانی و رسانه پیاده روی جاماندگان اربعین شهرستان قرچک
-
-</p>
-
+<h1>سامانه اطلاع رسانی مواکب پیاده روی جاماندگان اربعین ۱۴۰۵</h1>
+<h2>مسجد جامع قرچک تا حرم حضرت شاه عبدالعظیم حسنی (ع)</h2>
+<p>کمیته اطلاع رسانی و رسانه پیاده روی جاماندگان اربعین شهرستان قرچک</p>
 </div>
-
-</div>
-
+</section>
 
 <section class="cards">
-
 <div class="card">
-
-<i class="fa-solid fa-location-dot"></i>
-
-<h3>۵</h3>
-
+<h3 id="mokebCount">0</h3>
 <span>موکب فعال</span>
-
 </div>
-
 <div class="card">
-
-<i class="fa-solid fa-road"></i>
-
 <h3>۱۸ KM</h3>
-
 <span>طول مسیر</span>
+</div>
+</section>
 
+<div class="searchBox">
+<input id="search" placeholder="🔍 جستجوی نام موکب">
 </div>
 
-</section>
-
-
-<section class="searchBox">
-
-<input
-id="search"
-type="text"
-placeholder="🔍 جستجوی نام موکب...">
-
-</section>
-
+<div class="filters">
+<button onclick="filterMokeb('all')">همه</button>
+<button onclick="filterMokeb('پذیرایی')">🟢 پذیرایی</button>
+<button onclick="filterMokeb('فرهنگی')">🔵 فرهنگی</button>
+<button onclick="filterMokeb('خدماتی')">🟠 خدماتی</button>
+<button onclick="filterMokeb('درمانی')">🔴 درمانی</button>
+</div>
 
 <div id="map"></div>
 
-
 <footer>
-
 کمیته اطلاع رسانی و رسانه پیاده روی جاماندگان اربعین شهرستان قرچک
-
 </footer>
 
-
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <script src="script.js"></script>
 
 </body>
-
 </html>
